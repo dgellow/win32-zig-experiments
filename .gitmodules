@@ -1,0 +1,3 @@
+[submodule "src/vendor/zigwin32"]
+	path = src/vendor/zigwin32
+	url = git@github.com:marlersoft/zigwin32.git
