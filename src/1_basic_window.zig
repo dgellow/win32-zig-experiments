@@ -1,8 +1,4 @@
 const std = @import("std");
-const builtin = @import("builtin");
-const os = std.os;
-const log = std.log;
-const fs = std.fs;
 const w32 = @import("vendor/zigwin32/win32.zig").everything;
 
 const TRUE: w32.BOOL = 1;

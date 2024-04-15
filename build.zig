@@ -4,12 +4,16 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const exp_1_basic_window = Experiment{
+    addExperiment(b, target, optimize, .{
         .name = "1-basic-window",
         .source_file = "src/1_basic_window.zig",
         .description = "Run experiment 1-basic-window",
-    };
-    addExperiment(b, target, optimize, exp_1_basic_window);
+    });
+    addExperiment(b, target, optimize, .{
+        .name = "2-create-file",
+        .source_file = "src/2_create_file.zig",
+        .description = "Run experiment 2-create-file",
+    });
 }
 
 const Experiment = struct {
